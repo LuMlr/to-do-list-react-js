@@ -1,0 +1,100 @@
+:root {
+    --neon-buttons: hsl(317 100% 54%);
+}
+
+body {
+    font-family: 'Courgette', cursive;
+}
+
+main {
+    background-color: hsl(240 6% 17%);
+}
+
+.container {
+    width: 50%;
+    min-width: fit-content;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+
+
+.task {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 0.5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--neon-buttons);
+
+}
+
+.buttons {
+    border-style: none;
+    background-color: hsl(240 6% 17%);
+    float: right; 
+    color: var(--neon-buttons);
+    text-shadow:  0 0 1.5em var(--neon-buttons);
+}
+
+.buttons:hover{
+    border-style: none;
+    background-color: hsl(240 6% 17%)!important;
+    color: white;
+    text-shadow:  0 0 1em white;
+}
+
+.addbutton{
+    border-style: none;
+    background-color:  hsl(240 6% 17%);
+    color: var(--neon-buttons);
+    border-color: hsl(240 6% 17%);
+    text-shadow:  0 0 1.5em var(--neon-buttons);
+    
+}
+
+.addbutton:hover{
+    border-style: none;
+    background-color: hsl(240 6% 17%);
+    color: white;
+    text-shadow:  0 0 1em white;
+}
+
+
+
+#list {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.additem {
+    padding: 20px;
+}
+
+.taskitem {
+    color: white;
+    text-shadow:  0 0 1em white;
+    font-size: large;
+}
+    
+.backgroundcolor-col {
+    background-color: hsl(240 6% 17%);
+}
+
+h1, h2 {
+    color: white;
+    text-shadow:  0 0 0.5em white;
+}
+
+p  {
+    color: aliceblue;
+}
+/* Input Field */
+
