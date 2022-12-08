@@ -16,17 +16,19 @@ function App() {
     {id: 1,
     task: 'Get a coffee'}, 
     {id: 2,
-    task: 'buy xmas presents'},
+    task: 'Buy X-Mas presents'},
     {id: 3,
-    task: 'finish Group Project'},
+    task: 'Finish Group Project'},
   ]);
   return (
-    <div className='container mt-5'>
+    <div className='container mt-5 col backgroundcolor-col'>
+      <div id="list">
       {/* <Navbar />*/} 
       <Add tasks={tasks} setTasksArray={setTasksArray} />
        <Tasks tasks={tasks}/>
       {/* <Buttons /> Lukas */} 
       {/* <Counter />Sofia*/} 
+      </div>
     </div>
   );
 }

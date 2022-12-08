@@ -20,14 +20,14 @@ const [isActiveDone, setIsActiveDone] = useState(false);
 
     return (
         <div className="task">
-            <div 
-             style={{
-                textDecorationLine: isActiveDone ? 'line-through' : 'none',
-              }}
-            >{task.task}
-            <button onClick={onDone}>DONE</button>
-            <button onClick={onDelete}>DELETE</button>
-            <button>EDIT</button>
+            <div className="taskitem"
+                style={{textDecorationLine: isActiveDone ? 'line-through' : 'none'}}>
+                    {task.task}
+                <div className="buttons">
+                    <button onClick={onDone} className={"buttons btn btn-outline-success"}>DONE</button>
+                    <button onClick={onDelete} className={"buttons btn btn-outline-danger"}>DELETE</button>
+                    <button className={"buttons btn btn-outline-warning"}>EDIT</button>
+                </div>
             </div>
         </div>
     );
