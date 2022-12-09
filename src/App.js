@@ -7,25 +7,22 @@ import Buttons from './Components/Buttons';
 import Navbar from './Components/Navbar';
 import Tasks from './Components/Tasks';
 import Taskitem from './Components/Taskitem';
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 const tasks = [];
 
 function App() {
-  const [tasks, setTasksArray] = useState([
-    {id: 1,
-    task: 'Get a coffee'}, 
-    {id: 2,
-    task: 'Buy X-Mas presents'},
-    {id: 3,
-    task: 'Finish Group Project'},
-  ]);
+  const [tasks, setTasksArray] = useState([  ]);
+
+
+
   return (
     <div className='container mt-5 col backgroundcolor-col'>
       <div id="list">
       {/* <Navbar />*/} 
       <Add tasks={tasks} setTasksArray={setTasksArray} />
-       <Tasks tasks={tasks}/>
+       <Tasks tasks={tasks} setTasksArray={setTasksArray} contentEditable={false}/>
       {/* <Buttons /> Lukas */} 
       {/* <Counter />Sofia*/} 
       </div>

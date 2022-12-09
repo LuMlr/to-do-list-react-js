@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 
-export default function Add({ tasks, setTasksArray }) {
+export default function Add({ tasks, setTasksArray, contenteditable }) {
     let inputValue;
        const onChangeFun = (e) => {
              inputValue = e.target.value;
@@ -30,7 +30,7 @@ export default function Add({ tasks, setTasksArray }) {
                 </div>
             <div className="row row-cols-md-auto">
                 <div className="col-12 flex-grow-1">
-                <input onChange={onChangeFun} name="name" type="text" className="form-control" id="addItemInput" placeholder="New Task" />
+                <input onChange={onChangeFun} name="name" type="text" className="form-control" id="addItemInput" placeholder="New Task"/>
                 </div>
                 <div className="col-12">
                 <button onClick={onClickFun} type="button" id = "addInputButton" className="addbutton btn buttons float-end">Add</button>
