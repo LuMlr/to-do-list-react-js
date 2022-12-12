@@ -14,7 +14,7 @@ export default function Add({ tasks, setTasksArray, contenteditable }) {
             counter = counter+1;
           // slice will create a copy of the array
           const stateCopy = tasks.slice();
-          stateCopy.unshift({id: counter,task: inputValue });
+          stateCopy.unshift({id: counter,task: inputValue, completed: false});
           setTasksArray(stateCopy);
             }
             else {
