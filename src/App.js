@@ -12,10 +12,14 @@ import { useState, useEffect } from "react";
 
 const tasks = [];
 
+
 function App() {
   const [tasks, setTasksArray] = useState([  ]);
 
-
+  let uncompleted = 0;
+  for (let i=0; i < tasks.length; i++) {
+    if (tasks[i].completed === false) uncompleted++;
+  }
 
   return (
     <div className='container mt-5 col backgroundcolor-col'>
@@ -26,6 +30,7 @@ function App() {
       {/* <Buttons /> Lukas */} 
       {/* <Counter />Sofia*/} 
       </div>
+      <p>You have {uncompleted} undone tasks</p>
     </div>
   );
 }

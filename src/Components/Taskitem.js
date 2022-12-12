@@ -23,7 +23,11 @@ console.log(taskIndex);
 
 
     const onDone = () => {
-            setIsActiveDone(current => !current);
+        const stateCopy = tasks.slice();
+        setIsActiveDone(current => !current);
+        if (isActiveDone === false) {task.completed=true}
+        else{task.completed=false}
+        setTasksArray(stateCopy);
     }
 
     const onEdit = () => {
